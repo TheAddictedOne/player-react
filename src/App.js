@@ -1,7 +1,7 @@
 import React, { Suspense } from 'react'
 import 'App.css'
 
-const video = true
+const video = false
 
 const Media = video
   ? React.lazy(() => import(/* webpackChunkName: "video" */ 'Video.js'))
