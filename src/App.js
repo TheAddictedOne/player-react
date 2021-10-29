@@ -1,11 +1,11 @@
 import React, { Suspense } from 'react'
-import './App.css'
+import 'App.css'
 
-const video = false
+const video = true
 
 const Media = video
-  ? React.lazy(() => import('./Video.js'))
-  : React.lazy(() => import('./Audio.js'))
+  ? React.lazy(() => import(/* webpackChunkName: "video" */ 'Video.js'))
+  : React.lazy(() => import(/* webpackChunkName: "audio" */ 'Audio.js'))
 
 function App() {
   return (

@@ -1,4 +1,4 @@
-import './Audio.css'
+import 'Audio.css'
 
 function Audio() {
   return <audio controls src="/acoustic.mp4"></audio>
