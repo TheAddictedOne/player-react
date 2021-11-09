@@ -10,7 +10,6 @@ function Audio(props) {
   const audio = useRef(null)
 
   useEffect(() => {
-    window.tracking.vitals('player_ready')
     audio.current.addEventListener('play', onPlay, { once: true })
   }, [])
 

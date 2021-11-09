@@ -1,11 +1,15 @@
 import EmptyPlayer from "EmptyPlayer.js"
 import Loading from 'Loading.js'
-import React, { Suspense } from 'react'
+import React, { Suspense, useEffect } from 'react'
 import useMedia from 'useMedia.js'
 import 'App.css'
 
 function App() {
   const [Media, src] = useMedia()
+
+  useEffect(() => {
+    window.tracking.vitals('player_ready')
+  }, [])
 
   if (!Media) {
     return (

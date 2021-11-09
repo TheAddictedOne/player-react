@@ -10,7 +10,6 @@ function Video(props) {
   const video = useRef(null)
 
   useEffect(() => {
-    window.tracking.vitals('player_ready')
     video.current.addEventListener('play', onPlay, { once: true })
   }, [])
 
