@@ -68,3 +68,30 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+# Integration
+
+## HTML: inlined scripts
+
+- [x] `<noscript>`
+- [ ] Browser detection
+- [ ] Tracking (vitals)
+
+## core.js
+
+- [ ] Polyfills
+- [ ] API (load)
+- [ ] Tracking (secondaries)
+- [ ] View ID manager
+- [ ] Video loader
+- [ ] Error handler
+
+## main.js
+
+- [ ] Loading screen
+- [ ] API (secondaries)
+- [ ] Autoplay resolution
+- [ ] Infopack
+- [ ] Start screen
+- [ ] Controls (play + pause)
+- [ ] Password protected
