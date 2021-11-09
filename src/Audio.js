@@ -6,7 +6,7 @@ function onPlay() {
   window.tracking.log()
 }
 
-function Audio() {
+function Audio(props) {
   const audio = useRef(null)
 
   useEffect(() => {
@@ -14,7 +14,7 @@ function Audio() {
     audio.current.addEventListener('play', onPlay, { once: true })
   }, [])
 
-  return <audio ref={audio} controls src="/acoustic.mp3"></audio>
+  return <audio ref={audio} controls src={`/audios/${props.src}.mp3`}></audio>
 }
 
 export default Audio

@@ -6,7 +6,7 @@ function onPlay() {
   window.tracking.log()
 }
 
-function Video() {
+function Video(props) {
   const video = useRef(null)
 
   useEffect(() => {
@@ -14,7 +14,7 @@ function Video() {
     video.current.addEventListener('play', onPlay, { once: true })
   }, [])
 
-  return <video ref={video} controls src="/x7x43zv.mp4"></video>
+  return <video ref={video} controls src={`/videos/${props.src}.mp4`}></video>
 }
 
 export default Video

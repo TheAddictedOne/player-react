@@ -3,12 +3,12 @@ import useMedia from 'useMedia.js'
 import 'App.css'
 
 function App() {
-  const Media = useMedia()
+  const [Media, src] = useMedia()
 
   return (
     <div className="App">
       <Suspense fallback={<div>Suspense loading...</div>}>
-        {Media ? <Media /> : null}
+        {Media ? <Media src={src} /> : null}
       </Suspense>
     </div>
   )
