@@ -1,17 +1,14 @@
 import React, { Suspense } from 'react'
+import useMedia from 'useMedia.js'
 import 'App.css'
 
-const video = true
-
-const Media = video
-  ? React.lazy(() => import(/* webpackChunkName: "video" */ 'Video.js'))
-  : React.lazy(() => import(/* webpackChunkName: "audio" */ 'Audio.js'))
-
 function App() {
+  const Media = useMedia()
+
   return (
     <div className="App">
-      <Suspense fallback={<div>...</div>}>
-        <Media />
+      <Suspense fallback={<div>Suspense loading...</div>}>
+        {Media ? <Media /> : null}
       </Suspense>
     </div>
   )

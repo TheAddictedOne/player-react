@@ -3,6 +3,7 @@ import 'Video.css'
 
 function onPlay() {
   window.tracking.vitals('video_starts')
+  window.tracking.log()
 }
 
 function Video() {

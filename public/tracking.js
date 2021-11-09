@@ -9,7 +9,6 @@
   function vitals(name) {
     const mark = performance.mark(name)
     mark.category = CATEGORY_VITALS
-    console.log(mark)
   }
 
   function observerCallback(list) {
