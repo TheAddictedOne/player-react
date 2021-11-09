@@ -1,0 +1,19 @@
+.dotdotdot::after {
+  position: absolute;
+  content: ".";
+  animation: 2s infinite dotdotdot;
+}
+
+@keyframes dotdotdot {
+  from {
+    content: ".";
+  }
+
+  33% {
+    content: "..";
+  }
+
+  66% {
+    content: "...";
+  }
+}
