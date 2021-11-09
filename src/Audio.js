@@ -2,7 +2,7 @@ import { useRef, useEffect } from 'react'
 import 'Audio.css'
 
 function onPlay() {
-  window.tracking.vitals('audio_starts')
+  window.tracking.mark('technical', 'audio_starts')
   window.tracking.log()
 }
 

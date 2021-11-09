@@ -1,14 +1,14 @@
 (function() {
   // Declarations
   const CATEGORY_VITALS = 'vitals'
+
   const IFRAME_REQUESTED = 'iframe_requested'
-  const IFRAME_STARTS = 'iframe_starts'
 
   let lastMark = IFRAME_REQUESTED
 
-  function vitals(name) {
+  function mark(category, name) {
     const mark = performance.mark(name)
-    mark.category = CATEGORY_VITALS
+    mark.category = category
   }
 
   function observerCallback(list) {
@@ -22,20 +22,20 @@
     })
   }
 
-  function log() {
-    const table = []
+  function log(filter = ['vitals']) {
+    const table = [{ name: IFRAME_REQUESTED, 'duration (ms)': 0 }]
     performance.getEntries().forEach(({ category, name, startTime }) => {
-      if (category !== CATEGORY_VITALS) return
+      if (!filter.includes(category)) return
 
-      table.push({ name, startTime })
+      table.push({ name, 'duration (ms)': Math.round(startTime) })
     })
     console.table(table)
   }
 
   // Execution
   new PerformanceObserver(observerCallback).observe({ type: 'mark' })
-  vitals(IFRAME_STARTS)
+  mark(CATEGORY_VITALS, 'iframe_starts')
 
   // Export
-  window.tracking = { vitals, log }
+  window.tracking = { mark, log }
 })()

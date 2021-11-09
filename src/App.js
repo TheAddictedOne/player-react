@@ -8,7 +8,7 @@ function App() {
   const [Media, src] = useMedia()
 
   useEffect(() => {
-    window.tracking.vitals('player_ready')
+    window.tracking.mark('technical', 'player_ready')
   }, [])
 
   if (!Media) {
