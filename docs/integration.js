@@ -7,7 +7,7 @@ window.AUDIO_CUTE = { type: 'audio', src: 'cute' }
 window.AUDIO_HAPPYROCK = { type: 'audio', src: 'happy-rock' }
 
 window.load = function(media) {
-  document.querySelector('iframe').contentWindow.postMessage(media, 'http://localhost:3000')
+  document.querySelector('iframe').contentWindow.postMessage(media, '*')
 }
 
 document.querySelectorAll('button').forEach((button) => {

@@ -1,6 +1,6 @@
 (function() {
   const v = document.createElement('video')
-  v.src = "/x7x43zv.mp4"
+  v.src = "x7x43zv.mp4"
   v.play()
     .then(() => window.autoplay = 'Allowed')
     .catch(() => {
