@@ -9,3 +9,7 @@ window.AUDIO_HAPPYROCK = { type: 'audio', src: 'happy-rock' }
 window.load = function(media) {
   document.querySelector('iframe').contentWindow.postMessage(media, 'http://localhost:3000')
 }
+
+document.querySelectorAll('button').forEach((button) => {
+  button.addEventListener('click', () => window.load(window[button.dataset.media]))
+})

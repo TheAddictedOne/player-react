@@ -1,0 +1,18 @@
+.VideoScreen {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.VideoScreen svg {
+  width: 30%;
+  cursor: pointer;
+  position: absolute;
+  color: black;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 50%;
+  z-index: 1;
+}
