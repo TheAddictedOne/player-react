@@ -13,7 +13,7 @@ function Audio(props) {
     audio.current.addEventListener('play', onPlay, { once: true })
   }, [])
 
-  return <audio ref={audio} src={`/audios/${props.src}.mp3`} autoPlay controls></audio>
+  return <audio ref={audio} src={`audios/${props.src}.mp3`} autoPlay controls></audio>
 }
 
 export default Audio

@@ -13,7 +13,7 @@ function Video(props) {
     video.current.addEventListener('play', onPlay, { once: true })
   }, [])
 
-  return <video ref={video} src={`/videos/${props.src}.mp4`} autoPlay controls></video>
+  return <video ref={video} src={`videos/${props.src}.mp4`} autoPlay controls></video>
 }
 
 export default Video

@@ -13,7 +13,7 @@ function Uranio() {
   if (!MediaScreen) {
     return (
       <div className="Uranio">
-        <img src="/logo.png" alt="Dailymotion logo" />
+        <img src="logo.png" alt="Dailymotion logo" />
         <h1>Empty player</h1>
       </div>
     )
