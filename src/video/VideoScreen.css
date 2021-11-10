@@ -7,6 +7,11 @@
   position: relative;
 }
 
+.VideoScreen img {
+  width: 100%;
+  height: 100%;
+}
+
 .VideoScreen svg {
   width: 30%;
   cursor: pointer;
