@@ -1,0 +1,2 @@
+.VideoScreen{display:flex;justify-content:center;align-items:center;position:relative}.VideoScreen,.VideoScreen img{width:100%;height:100%}.VideoScreen svg{width:30%;cursor:pointer;position:absolute;color:#000;background:rgba(0,0,0,.2);border-radius:50%;z-index:1}video{width:100%;height:100%;background:#000}
+/*# sourceMappingURL=video.1cf23f11.chunk.css.map */
